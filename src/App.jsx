@@ -1,11 +1,17 @@
 import { Route, Routes } from 'react-router-dom';
 
+import { SignupCard } from '@/components/organisms/Auth/SignupCard';
+
+import { SigninCard } from './components/organisms/Auth/signinCard';
 import {Auth} from './pages/Auth/Auth';
+
 
 function App() {
   return (
     <Routes>  
       <Route path="/auth" element={<Auth />} />
+      <Route path="/auth/signup" element={<Auth><SignupCard /></Auth>} />
+      <Route path="/auth/signin" element={<Auth><SigninCard /></Auth>} />
     </Routes>
   );
 }
