@@ -1,11 +1,13 @@
-import { Button } from '@/components/ui/button'
+import { Route, Routes } from 'react-router-dom';
+
+import {Auth} from './pages/Auth/Auth';
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  )
+    <Routes>  
+      <Route path="/auth" element={<Auth />} />
+    </Routes>
+  );
 }
 
 export default App;
